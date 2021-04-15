@@ -137,7 +137,7 @@ function init() {
   for (let i = 0; i < numOfFireworks; i++) {
     fireworks.push(new firework(rndNum(canvas.width), canvas.height));
   }
-  var confetti = confetti.create(canvas, {resize: true, useWorker: true});
+  var confetti = confetti.create(canvas, {resize: true, useWorker: false});
   confetti({particleCount: 100, spread: 100});
 }
 
