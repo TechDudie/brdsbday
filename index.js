@@ -137,8 +137,10 @@ function init() {
   for (let i = 0; i < numOfFireworks; i++) {
     fireworks.push(new firework(rndNum(canvas.width), canvas.height));
   }
-  var confetti = confetti.create(canvas, {resize: true, useWorker: false});
-  confetti({particleCount: 100, spread: 100});
+  var confetti_canvas = document.getElementById('canvas');
+  var confetti_settings = {target: confetti_canvas};
+  var confetti = new ConfettiGenerator(confetti_settings);
+  confetti.render();
 }
 
 function update(time) {
